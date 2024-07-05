@@ -1,0 +1,195 @@
+/* style.css */
+form {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input,
+select {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid #ececec;
+}
+input:focus {
+  outline-color: #cd9317;
+  border: 2px solid #cd9317;
+}
+
+input[type="submit"] {
+  width: auto;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.roi-calculator-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.roi-calculator-form-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.roi-calculator-results-wrapper {
+  width: 100%;
+  max-width: 100%;
+  background: #26222f;
+  color: #fff;
+  padding: 30px;
+}
+.roi-calculator-results-wrapper h3 {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.roi-form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.roi-form-item {
+  width: 100%;
+}
+
+.roi-btn {
+  color: #fff;
+  background: #cd9317;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 12px 48px;
+}
+
+.roi-btn:hover {
+  color: #fff;
+  background: #26222f;
+}
+
+.roi-form-checkbox {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.roi-form-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+
+.roi-form-checkbox div {
+  padding-left: 40px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 2px solid #ececec;
+  border-radius: 4px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.roi-form-checkbox:hover input ~ .checkmark {
+  background-color: #f9f9f9;
+}
+
+.roi-form-checkbox input:checked ~ .checkmark {
+  background-color: #cd9317;
+}
+
+.roi-form-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.roi-form-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.roi-form-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.roi-form-checkbox span {
+  display: block;
+}
+.results-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  line-height: 1.5;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.results-text {
+  max-width: 360px;
+}
+.results-number {
+  font-size: 24px;
+  color: #cd9317;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .roi-calculator-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .roi-calculator-form-wrapper {
+    max-width: 50%;
+  }
+  .roi-calculator-results-wrapper {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .roi-form-row {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+  .roi-form-item {
+    width: 50%;
+  }
+  .results-item {
+    flex-direction: row;
+    align-items: center;
+  }
+}
