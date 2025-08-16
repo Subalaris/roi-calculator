@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: ROI Calculator
-Description: ROI calculator plugin.
-Version: 1.0
+Plugin Name: Solar ROI Calculator
+Description: ROI calculator for solar panels plugin.
+Version: 1.1.1
 Author: Marko Moguljak
 */
 
@@ -362,7 +362,14 @@ if (!class_exists('ROICalculatorPlugin')) {
         ";
          }
 
-         $user_email_body .= "<p>Sunčani pozdrav!</p>";
+         $user_email_body .= "
+         <p>Sunčani pozdrav!</p>
+         <p></p>
+         <p>Igor Kranjec</p>
+         <p>+385 95 852 1575</p>
+         <p>kranjec@asapsolar.hr</p>
+         <p><a href='mailto:kranjec@asapsolar.hr'>kranjec@asapsolar.hr</a></p>
+         ";
 
          // Email to company
          $company_email_subject = 'Novi unos u ROI kalkulator';
